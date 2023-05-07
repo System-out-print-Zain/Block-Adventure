@@ -1,0 +1,50 @@
+|Collision Detection|
+
+    Objects involved in the game:
+     - The Player
+     - The Enemies
+     - Obstacles
+     - Doors
+     - Projectiles
+
+    We want to be able to detect collisions between any of these
+    objects. An object's response to a collision depends on itself
+    and the object that it collided with. For example, if the player
+    collides with an obstacle, it must stop moving in that direction.
+    However, if it collides with an enemy then it should take damage
+    and run a damaged animation. If a projectile, however, collides with
+    an obstacle or a player, it must simply disappear. If it collides
+    with an enemy, the collision can be ignored.
+
+    We can distinguish between passive and active game objects.
+    The doors and obstacles are passive; that is, they are unmoving
+    and do not need to check for collisions among themselves. Players,
+    enemies, and projectiles are active; that is, they must check for collisions
+    among themselves in addition to collisions between themselves and the passive
+    objects.
+
+    Where is collision checked? Clearly, we cannot have a separate
+    collision detection method in each of the classes for these objects.
+    This is organizationally unappealing as the algorithm to detect the collision
+    between two objects will be the same. Rather we should have a method distinct
+    from all of these classes wherein all objects in the room are iterated over
+    and collisions between any of them are checked. The appropriate data is fed
+    to the objects involved in the collision whereupon they execute the desired
+    response.
+
+    It makes sense to add this method to the Room class as this is where all
+    the objects are to interact.
+
+    == Collision Detection Algorithm ==
+
+    Since the player is not a part of the room as the other game objects are,
+    we can split the algorithm into two parts: 1) Comparing the location of the
+    player to all the other objects in the room 2) Comparing the locations of
+    the remaining active objects to each other and to the passive objects.
+
+        == Detecting A Collision Between Two Objects ==
+
+
+
+
+

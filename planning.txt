@@ -1,0 +1,36 @@
+=== Block Adventure ===
+
+A 2D action-adventure game to be coded using Pygame.
+
+=Aspects=
+- All sprites will be block-like.
+
+- The playable character. It can move in any
+of the 4 directions and is able to attack with a strike. It
+has 3 HP. ?It can also increase the max amount of hp by collecting a certain
+item?
+
+- 4 standard enemies, each with its own movement patterns and HP
+1) The Grunt: A mindless enemy that moves in a given direction until it
+encounters an obstacle, whereupon it turns in the opposite direction
+and continues. 1 HP.
+2) The Dasher: Dashes from one spot to another within a fixed radius.
+It is not impeded by obstacles. 1 HP.
+3) The Supervisor. Pursues the player when within range; otherwise it
+follows some standard movement pattern.
+4)
+- A boss enemy, more powerful than the standard enemies.
+
+* When an enemy makes contact with the player, the player
+loses some amount of HP depending on the enemy. When the player
+strikes an enemy, the enemy loses one health point.
+
+4 areas where standard enemies are located. The boss area can be
+accessed only if a key is obtained after killing all enemies in the
+4 areas.
+
+== TODO ==
+- Add animations for:
+  - Enemy Deaths
+  - Damage
+-
